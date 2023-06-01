@@ -2,13 +2,13 @@
 
 import Link from "next/link";
 import "./globals.css";
-import { Inter } from "next/font/google";
+import { DM_Sans } from "next/font/google";
 import Image from "next/image";
 import { useState } from "react";
 import { usePathname } from "next/navigation";
 import { motion } from "framer-motion";
 
-const inter = Inter({ subsets: ["latin"] });
+const sans = DM_Sans({ weight: "400", subsets: ["latin"] });
 
 export default function RootLayout({
    children,
@@ -21,7 +21,7 @@ export default function RootLayout({
    return (
       <html lang="en">
          <body
-            className={inter.className}
+            className={sans.className}
             style={{
                backgroundColor: "black",
             }}
@@ -30,11 +30,14 @@ export default function RootLayout({
                <motion.div
                   initial={{ x: show ? -300 : 0 }}
                   animate={{ x: 0 }}
-                  transition={{ duration: 0.5 }}
+                  style={{
+                     backgroundColor: show ? "#042626" : "",
+                  }}
+                  transition={{ duration: 0.3 }}
                   key={show ? "oke" : undefined}
                   className={`items-start z-50 absolute  ${
                      pathname === "/" && "bg-black"
-                  } ${!show ? "bg-opacity-30" : "h-screen bg-black"} w-screen`}
+                  } ${!show ? "bg-opacity-30" : "h-screen"} w-screen`}
                >
                   <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-6">
                      {!show && (

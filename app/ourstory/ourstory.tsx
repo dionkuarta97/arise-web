@@ -18,9 +18,9 @@ export default function OurStory() {
                initial={{ x: -800 }}
                animate={{ x: 0 }}
                transition={{ duration: 0.5 }}
-               className="md:w-2/6 w-11/12 flex justify-center"
+               className="md:w-2/6 w-11/12 flex md:justify-center"
             >
-               <div className={"md:text-4xl text-xl font-bold text-white"}>
+               <div className={"md:text-4xl text-3xl font-bold text-white"}>
                   Our Story
                </div>
             </motion.div>
@@ -52,7 +52,7 @@ export default function OurStory() {
                   By making Web3 exploration easy for users, adoption by
                   businesses will become even more prevalent.
                </motion.div>
-               <div className="flex md:mt-12 md:flex-row md:space-x-8">
+               <div className="flex md:mt-12 flex-col space-x-0 md:space-y-0 space-y-4 mt-8 md:flex-row md:space-x-8">
                   <motion.div
                      initial={{ x: 30, opacity: 0 }}
                      animate={{ x: 0, opacity: 1 }}
@@ -68,7 +68,7 @@ export default function OurStory() {
                         backgroundSize: "cover",
                         backgroundPosition: "center",
                      }}
-                     className="md:p-8 rounded-lg md:w-1/3 flex-col"
+                     className="md:p-8 p-3 rounded-lg md:w-1/3 flex-col"
                   >
                      <div className="text-base text-white md:mb-2">PAIN 01</div>
                      <div className="md:text-lg text-base text-white font-bold">
@@ -94,7 +94,7 @@ export default function OurStory() {
                         backgroundSize: "cover",
                         backgroundPosition: "center",
                      }}
-                     className="md:p-8 rounded-lg md:w-1/3 flex-col"
+                     className="md:p-8 p-3 rounded-lg md:w-1/3 flex-col"
                   >
                      <div className="text-base text-white md:mb-2">PAIN 02</div>
                      <div className="md:text-lg text-base text-white font-bold">
@@ -120,7 +120,7 @@ export default function OurStory() {
                         backgroundSize: "cover",
                         backgroundPosition: "center",
                      }}
-                     className="md:p-8 rounded-lg md:w-1/3 flex-col"
+                     className="md:p-8 p-3 rounded-lg md:w-1/3 flex-col"
                   >
                      <div className="text-base text-white md:mb-2">PAIN 03</div>
                      <div className="md:text-lg text-base text-white font-bold">
