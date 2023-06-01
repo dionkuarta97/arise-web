@@ -1,6 +1,6 @@
 "use client";
 import bg from "../assets/background-image-2.png";
-import { motion, Variants } from "framer-motion";
+import { motion } from "framer-motion";
 
 export default function OurStory() {
    return (
