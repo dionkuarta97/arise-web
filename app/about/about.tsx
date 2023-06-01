@@ -27,6 +27,10 @@ export default function About() {
                   width="0"
                   height="0"
                   sizes="200vh"
+                  style={{
+                     WebkitFilter: "drop-shadow(8px 8px 8px #000)",
+                     filter: "drop-shadow(8px 8px 8px #000)",
+                  }}
                   className="md:w-full w-11/12 h-auto"
                />
             </motion.div>

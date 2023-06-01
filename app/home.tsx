@@ -5,15 +5,6 @@ import bg from "./assets/background-image.jpg";
 
 const parentVariant: Variants = {
    initial: { opacity: 0 },
-   /**
-    * Here we are defining @param staggerChildren with 1sec.
-    * You can change this time as per your need.
-    * 1st child will not get delayed. delay starts from 2nd child onwards.
-    * 2nd child animation will start after: 1sec
-    * 2rd child animation will start after: 2sec
-    * 4th child animation will start after: 3sec
-    * and so on...
-    */
    animate: { opacity: 1, transition: { staggerChildren: 0.5, duration: 1 } },
 };
 
