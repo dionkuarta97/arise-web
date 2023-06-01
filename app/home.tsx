@@ -14,7 +14,7 @@ const parentVariant: Variants = {
     * 4th child animation will start after: 3sec
     * and so on...
     */
-   animate: { opacity: 1, transition: { staggerChildren: 1, duration: 1 } },
+   animate: { opacity: 1, transition: { staggerChildren: 0.5, duration: 1 } },
 };
 
 const childrenVariant: Variants = {
