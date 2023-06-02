@@ -146,7 +146,7 @@ export default function Web3() {
                            WebkitFilter: "drop-shadow(5px 5px 5px #000)",
                            filter: "drop-shadow(5px 5px 5px #000)",
                         }}
-                        className="w-full h-auto"
+                        className="md:w-11/12 w-full h-auto"
                      />
                   </div>
                ))}
