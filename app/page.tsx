@@ -1,7 +1,7 @@
 import Home from "./home";
 
 export const metadata = {
-   title: "Arise - Home",
+   title: "Mazri Tech - Home",
 };
 
 export default function Page() {

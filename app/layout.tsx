@@ -48,14 +48,14 @@ export default function RootLayout({
                            href={"/"}
                            className="flex items-center md:hover:scale-110"
                         >
-                           <Image
-                              src="/logo.png"
+                           <img
                               alt="Picture of the author"
-                              width="0"
-                              height="0"
-                              sizes="20vh"
-                              className="w-32 h-auto"
+                              className="w-7 h-auto"
+                              src="/logo.png"
                            />
+                           <div className="md:text-2xl md:ml-4 ml-2 text-xl text-white">
+                              MAZRI TECH
+                           </div>
                         </Link>
                      )}
 
@@ -116,14 +116,14 @@ export default function RootLayout({
                                  onClick={() => {
                                     setShow(false);
                                  }}
-                                 href="/about"
+                                 href="/"
                                  className={`block md:hover:scale-110 py-2 pl-3 mb-2 md:mb-0 pr-4 rounded hover:bg-black md:hover:bg-transparent md:border-0 md:hover:text-teal-200 md:p-0 ${
-                                    pathname === "/about"
+                                    pathname === "/"
                                        ? "text-teal-200"
                                        : "text-white"
                                  }`}
                               >
-                                 About
+                                 Home
                               </Link>
                            </li>
                            <li>
@@ -131,14 +131,14 @@ export default function RootLayout({
                                  onClick={() => {
                                     setShow(false);
                                  }}
-                                 href="/ourstory"
+                                 href="/services"
                                  className={`block py-2 md:hover:scale-110 pl-3 pr-4 mb-2 md:mb-0 rounded hover:bg-black md:hover:bg-transparent md:border-0 md:hover:text-teal-200 md:p-0 ${
-                                    pathname === "/ourstory"
+                                    pathname.includes("services")
                                        ? "text-teal-200"
                                        : "text-white"
                                  }`}
                               >
-                                 Our Story
+                                 Services
                               </Link>
                            </li>
                            <li>
@@ -146,74 +146,14 @@ export default function RootLayout({
                                  onClick={() => {
                                     setShow(false);
                                  }}
-                                 href="/web3"
-                                 className={`block py-2 md:hover:scale-110 mb-2 md:mb-0 pl-3 pr-4 rounded hover:bg-black md:hover:bg-transparent md:border-0 md:hover:text-teal-200 md:p-0 ${
-                                    pathname === "/web3"
+                                 href="/portofolio"
+                                 className={`block py-2 md:hover:scale-110 pl-3 pr-4 mb-2 md:mb-0 rounded hover:bg-black md:hover:bg-transparent md:border-0 md:hover:text-teal-200 md:p-0 ${
+                                    pathname.includes("portofolio")
                                        ? "text-teal-200"
                                        : "text-white"
                                  }`}
                               >
-                                 Explore Web3
-                              </Link>
-                           </li>
-                           <li>
-                              <Link
-                                 onClick={() => {
-                                    setShow(false);
-                                 }}
-                                 href="/solutions"
-                                 className={`block py-2 md:hover:scale-110 mb-2 md:mb-0 pl-3 pr-4 rounded hover:bg-black md:hover:bg-transparent md:border-0 md:hover:text-teal-200 md:p-0 ${
-                                    pathname === "/solutions"
-                                       ? "text-teal-200"
-                                       : "text-white"
-                                 }`}
-                              >
-                                 Our Solutions
-                              </Link>
-                           </li>
-                           <li>
-                              <Link
-                                 onClick={() => {
-                                    setShow(false);
-                                 }}
-                                 href="/roadmap"
-                                 className={`block py-2 md:hover:scale-110 mb-2 md:mb-0 pl-3 pr-4 rounded hover:bg-black md:hover:bg-transparent md:border-0 md:hover:text-teal-200 md:p-0 ${
-                                    pathname === "/roadmap"
-                                       ? "text-teal-200"
-                                       : "text-white"
-                                 }`}
-                              >
-                                 Roadmap
-                              </Link>
-                           </li>
-                           <li>
-                              <Link
-                                 onClick={() => {
-                                    setShow(false);
-                                 }}
-                                 href="/ourteam"
-                                 className={`block py-2 md:hover:scale-110 mb-2 md:mb-0 pl-3 pr-4 rounded hover:bg-black md:hover:bg-transparent md:border-0 md:hover:text-teal-200 md:p-0 ${
-                                    pathname === "/ourteam"
-                                       ? "text-teal-200"
-                                       : "text-white"
-                                 }`}
-                              >
-                                 Our Team
-                              </Link>
-                           </li>
-                           <li>
-                              <Link
-                                 onClick={() => {
-                                    setShow(false);
-                                 }}
-                                 href="/contact"
-                                 className={`block py-2 md:hover:scale-110 mb-2 md:mb-0 pl-3 pr-4 rounded hover:bg-black md:hover:bg-transparent md:border-0 md:hover:text-teal-200 md:p-0 ${
-                                    pathname === "/contact"
-                                       ? "text-teal-200"
-                                       : "text-white"
-                                 }`}
-                              >
-                                 Contact Us
+                                 Portofolio
                               </Link>
                            </li>
                         </ul>
@@ -222,6 +162,19 @@ export default function RootLayout({
                </motion.div>
             </header>
             <main>{children}</main>
+            <footer>
+               <div
+                  className={`w-screen  bottom-0 ${
+                     pathname === "/" ? "bg-emerald-800" : "bg-black"
+                  }  flex md:px-32 bg-opacity-40 flex-wrap items-center justify-between mx-auto p-6`}
+               >
+                  <div className="text-white">Alamat:</div>
+                  <div className="text-white">
+                     Kecamatan Harau, Kabupaten Lima Puluh Kota, Provinsi
+                     Sumatera Barat
+                  </div>
+               </div>
+            </footer>
          </body>
       </html>
    );

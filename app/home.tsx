@@ -2,6 +2,7 @@
 
 import { Variants, motion } from "framer-motion";
 import bg from "./assets/background-image.jpg";
+import { useRouter } from "next/navigation";
 
 const parentVariant: Variants = {
    initial: { opacity: 0 },
@@ -13,6 +14,7 @@ const childrenVariant: Variants = {
    animate: { opacity: 1, scale: 1 },
 };
 export default function Home() {
+   const router = useRouter();
    return (
       <div
          style={{
@@ -33,19 +35,22 @@ export default function Home() {
                variants={childrenVariant}
                className="text-white font-bold drop-shadow-lg md:text-6xl text-2xl"
             >
-               Simplifying Web3 For Individuals And Businesses
+               Selamat Datang di Mazri Technology
             </motion.div>
             <div className="text-white md:m-16 m-8 md:text-xl text-lg">
-               A user friendly Wallet as a Service and business service suite
-               that bridges the blockchain world with everyday economic
-               activites
+               Kami berdedikasi untuk memberikan solusi teknologi terbaik bagi
+               bisnis dan individu, fokus kami pada layanan korporat dan
+               individu dalam bidang teknologi informasi.
             </div>
             <motion.div
                variants={childrenVariant}
                className="text-white md:m-16 m-8 md:text-xl text-lg"
             >
-               <button className="border md:py-3 py-1 md:px-16 px-5 bg-white bg-opacity-10 active:bg-opacity-0 active:scale-95 rounded-lg">
-                  Join Waitlist
+               <button
+                  onClick={() => router.push("/services")}
+                  className="border md:py-3 py-1 md:px-16 px-5 bg-white bg-opacity-10 active:bg-opacity-0 active:scale-95 rounded-lg"
+               >
+                  Servis Kami
                </button>
             </motion.div>
          </motion.div>
